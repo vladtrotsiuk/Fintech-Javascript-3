@@ -4,9 +4,18 @@
  * @return {{min: number, max: number}} объект с минимумом и максимумом
  * '1 и 6.45, -2, но 8, а затем 15, то есть 2.7 и -1028' => { min: -1028, max: 15 }
  */
-function getMinMax(string) {
-
-}
+ function getMinMax(string) {
+   let arr = string.split(/[ ,/;!?]/)
+   for (let i = 0; i < arr.length; i++){
+     if (isNaN(arr[i]) || arr[i] === "") {
+       arr.splice(i,1)
+       i--
+     }
+   }
+   let minimum = Math.min.apply(null,arr)
+   let maximum = Math.max.apply(null,arr);
+   return {min:minimum, max: maximum}
+ }
 
 /* ============================================= */
 
@@ -15,9 +24,11 @@ function getMinMax(string) {
  * @param {number} x номер числа
  * @return {number} число под номером х
  */
-function fibonacciSimple(x) {
-  return x;
-}
+ function fibonacciSimple(x) {
+   if (x === 0) return 0
+   if (x === 1) return 1
+   return fibonacciSimple(x-1)+ fibonacciSimple(x - 2)
+ }
 
 /* ============================================= */
 
@@ -27,9 +38,21 @@ function fibonacciSimple(x) {
  * @param {number} x номер числа
  * @return {number} число под номером х
  */
-function fibonacciWithCache(x) {
-  return x;
-}
+ function fibonacciWithCache(x) {
+   let cache = {}
+     function fibonacciSimple(x) {
+     let answer
+     if (x in cache) answer = cache[x]
+     else {
+       if (x === 0) return 0
+       if (x === 1) return 1
+       answer = fibonacciSimple(x-1)+ fibonacciSimple(x - 2)
+       cache[x] = answer
+       }
+       return answer
+     }
+   return fibonacciSimple(x);
+ }
 
 /* ============================================= */
 
@@ -48,9 +71,29 @@ function fibonacciWithCache(x) {
  * @param  {number} cols количество столбцов
  * @return {string}
  */
-function printNumbers(max, cols) {
-
-}
+ function printNumbers(max, cols) {
+   let count = 0
+   let nstring = 0
+   let delta = Math.ceil(max / cols)
+   let string =''
+   let number = 0
+   let space = ' '
+   let space1 = ' '
+   for (i = 0; i < max + 1; i++){
+     count++
+     if (number < 10) {space = ' '} else space = ''
+     if (count  === cols || number === max) {space1 = ''} else space1 = ' '
+     string = string + space + number + space1
+     number += delta
+     if (count === cols){
+       if (nstring + 1 != delta) {string += '\n'}
+       count = 0
+       nstring++
+       number = nstring
+     }
+   }
+   return string
+ }
 
 /* ============================================= */
 
@@ -59,9 +102,27 @@ function printNumbers(max, cols) {
  * @param  {string} value
  * @return {string}
  */
-function rle(input) {
-
-}
+ function rle(input) {
+   let ch = input[0]
+   let count = 1
+   input += ' '
+   for (let i = 0; i < input.length-1; i++){
+     if (ch != input[i+1]) {
+       if (count != 1){
+         input = input.substring(0, i+1) + count + input.substring(i+1)
+         i++
+        }
+       ch = input[i+1]
+       count = 1
+      }
+      else {
+            input = input.substring(0,i) + input.substring(i+1)
+            count++
+            i--
+           }
+     }
+     return input.substring(0,input.length - 1)
+ }
 
 module.exports = {
   getMinMax,
