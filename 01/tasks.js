@@ -45,21 +45,21 @@ function fibonacciSimple(x) {
  * @return {number} число под номером х
  */
 const fibonacciWithCache = (function() {
-  const memo = {};
+  const cache = {};
 
-  function fibonacci(x) {
-    let value;
+  function f(x) {
+    let answer;
 
-    if (x in memo) {
-      value = memo[x];
+    if (x in cache) {
+      answer = cache[x];
     } else {
-      value = (x === 0 || x === 1) ? x : fibonacci(x - 1) + fibonacci(x - 2);
-      memo[x] = value;
+      answer = (x === 0 || x === 1) ? x : f(x - 1) + f(x - 2);
+      cache[x] = answer;
     }
-    return value;
+    return answer;
   }
 
-  return fibonacci();
+  return f;
 }());
 
 /* ============================================= */
