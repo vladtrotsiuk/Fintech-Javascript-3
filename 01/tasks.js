@@ -13,8 +13,8 @@ function getMinMax(string) {
       i--;
     }
   }
-  const minimum = Math.min.apply(null, arr);
-  const maximum = Math.max.apply(null, arr);
+  const minimum = Math.min(...arr);
+  const maximum = Math.max(...arr);
 
   return { min: minimum, max: maximum };
 }
@@ -45,21 +45,21 @@ function fibonacciSimple(x) {
  * @return {number} число под номером х
  */
 const fibonacciWithCache = (function() {
-  const cache = {};
+  const memo = {};
 
-  function f(x) {
-    let answer;
+  function fibonacci(x) {
+    let value;
 
-    if (x in cache) {
-      answer = cache[x];
+    if (x in memo) {
+      value = memo[x];
     } else {
-      answer = (x === 0 || x === 1) ? x : f(x - 1) + f(x - 2);
-      cache[x] = answer;
+      value = (x === 0 || x === 1) ? x : fibonacci(x - 1) + fibonacci(x - 2);
+      memo[x] = value;
     }
-    return answer;
+    return value;
   }
 
-  return f;
+  return fibonacci();
 }());
 
 /* ============================================= */
