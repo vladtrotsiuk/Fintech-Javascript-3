@@ -3,7 +3,7 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-  for (var i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
     setTimeout(() => {
       logger(i);
     }, 100);
@@ -44,9 +44,12 @@ function sum(x) {
  * @param {string} second
  * @return {boolean}
  */
-function anagram(first, second) {
-  return false;
-}
+ function anagram(first, second) {
+   if (first.includes(second) && first.length === second.length)
+     return true;
+   else
+     return true;
+ }
 
 /*= ============================================ */
 
@@ -56,9 +59,21 @@ function anagram(first, second) {
  * @param {Array<number>} исходный массив
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getUnique(arr) {
-  return [];
-}
+ function getUnique(arr) {
+   function compareNumbers(a, b) {
+   return a - b;
+ }
+   arr = arr.sort(compareNumbers)
+   let temp = arr[1];
+   for (let i = 1; i < arr.length; i++){
+     if (arr[i] == arr[i - 1]) {
+       arr.splice(i - 1, 1)
+       i--
+       console.log(1)
+     }
+   }
+   return arr;
+ }
 
 /**
  * Найдите пересечение двух массивов
@@ -66,9 +81,25 @@ function getUnique(arr) {
  * @param {Array<number>, Array<number>} first, second исходные массивы
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
-function getIntersection(first, second) {
-  return [];
-}
+ function getIntersection(first, second) {
+   let arr = [];
+   for (let i = 0; i < first.length; i++){
+     if (arr.indexOf(first[i]) === -1 && second.indexOf(first[i]) !== -1) {
+       arr.push(first[i])
+     }
+   }
+   for (let i = 0; i < second.length; i++){
+     if (arr.indexOf(second[i]) === -1 && first.indexOf(second[i]) !== -1) {
+       arr.push(second[i])
+     }
+   }
+    function compareNumbers(a, b) {
+    return a - b;
+  }
+    arr = arr.sort(compareNumbers)
+   return arr;
+ }
+ //УБРАТЬ ВТОРОЙ ЦИКЛ СРАВЕНЕНИЕ ДЛИН И ПРИБАВЛЕНИЕМ РАЗНИЦЫ В count
 
 /* ============================================= */
 
@@ -85,9 +116,26 @@ function getIntersection(first, second) {
  * @param  {string} right
  * @return {boolean}
  */
-function isIsomorphic(left, right) {
-
-}
+ function isIsomorphic(left, right) {
+   let count = 0;
+   if (left.length > right.length) {
+     let length = left.length
+     }
+   else {
+     length = right.length
+   }
+     for (let i = 0; i < length; i++){
+       if (left[i] !== right[i]) {
+         count++;
+       }
+   }
+   if (count > 1) {
+     return false;
+   }
+   else {
+     return true;
+   }
+ }
 
 module.exports = {
   timer,
