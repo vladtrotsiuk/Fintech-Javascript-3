@@ -19,9 +19,11 @@ function timer(logger = console.log) {
  * @param {Array<any>} args массив аргументов
  * @return {Function} функция с нужным контекстом
  */
-function customBind(func, context, ...args) {
-
-}
+ function customBind(func, context, ...args) {
+   return function(...extraargs) {
+     return func.apply(context, ...args, ...extraargs);
+   };
+ }
 
 /*= ============================================ */
 
@@ -32,9 +34,9 @@ function customBind(func, context, ...args) {
  * sum :: Number -> sum
  * sum :: void -> Number
  */
-function sum(x) {
-  return 0;
-}
+ function sum(x) {
+   return x === undefined ? 0 : (y) => y === undefined ? x : sum(x + y);
+ }
 
 /*= ============================================ */
 
@@ -45,11 +47,8 @@ function sum(x) {
  * @return {boolean}
  */
  function anagram(first, second) {
-   if (first.includes(second) && first.length === second.length)
-     return true;
-   else
-     return true;
- }
+   return (first.split('').sort().join('')===second.split('').sort().join('')?true:false);
+}
 
 /*= ============================================ */
 
@@ -118,12 +117,7 @@ function sum(x) {
  */
  function isIsomorphic(left, right) {
    let count = 0;
-   if (left.length > right.length) {
-     let length = left.length
-     }
-   else {
-     length = right.length
-   }
+   let length = (left.length > right.length) ? left.length : right.length;
      for (let i = 0; i < length; i++){
        if (left[i] !== right[i]) {
          count++;
