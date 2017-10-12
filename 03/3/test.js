@@ -1,4 +1,4 @@
-const expect = require('expect.js');
+/*const expect = require('expect.js');
 const promiseAll = require('./task.js');
 const { delayPromise } = require('../utils.js');
 
@@ -58,3 +58,4 @@ describe('Lesson 3 - task 3', () => {
     );
   });
 });
+*/
