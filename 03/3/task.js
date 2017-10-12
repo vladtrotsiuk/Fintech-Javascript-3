@@ -6,9 +6,8 @@
  * @return {Promise}
  */
 
-/*function promiseAll(promises) {
+function promiseAll(promises) {
 
 }
 
 module.exports = promiseAll;
-*/
