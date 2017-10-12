@@ -7,7 +7,21 @@
  */
 
 function promiseAll(promises) {
+  const result_arr = [];
+  let counter = 0;
 
+  return new Promise((resolve, reject) => {
+    promises.forEach((prom, i) => prom
+      .then(value => {
+        counter++;
+        result_arr[i] = value;
+      }, reject)
+      .then(() => {
+        if (counter === promises.length) {
+          resolve(result_arr);
+        }
+      }));
+  });
 }
 
 module.exports = promiseAll;

@@ -1,6 +1,8 @@
-/*const expect = require('expect.js');
+const expect = require('expect.js');
 const promiseAll = require('./task.js');
-const { delayPromise } = require('../utils.js');
+const {
+  delayPromise
+} = require('../utils.js');
 
 describe('Lesson 3 - task 3', () => {
   it('should be rejected if one was rejected', done => {
@@ -58,4 +60,3 @@ describe('Lesson 3 - task 3', () => {
     );
   });
 });
-*/
