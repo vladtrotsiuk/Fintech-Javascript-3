@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<!--<html>
 <head>
     <meta charset="utf-8">
     <title>Задание 2</title>
@@ -18,4 +18,238 @@
 <h1> Вторая, как на картинке, отступ между ячейками 8px</h1>
 <image src="https://habrastorage.org/webt/59/e3/06/59e306153cd88184926845.png"></image>
 </body>
+</html>
+-->
+
+<html>
+
+<head>
+  <style type="text/css">
+    #table1 {
+      table-layout: fixed;
+      width: 50%;
+    }
+
+    #caption {
+      background-color: #455A64;
+      font-weight: bold;
+      text-align: center;
+
+    }
+
+    #overflow {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #wrap {
+      word-wrap: break-word;
+    }
+
+    #odd {
+      background-color: grey;
+      padding: 5px;
+    }
+
+    #odd :hover {
+      background-color: yellow;
+    }
+
+    #even {
+      background: #29B6F6;
+    }
+
+    #even :hover {
+      background-color: yellow;
+    }
+
+    div {
+      padding: 7px;
+      margin: 1px;
+
+    }
+
+    #this {
+      background: #3fbe80;
+    }
+
+    #little {
+      background: #34cb98;
+    }
+
+    #piggy {
+      background: #26d8ba
+    }
+
+    #went {
+      background: #19e6e6
+    }
+
+    #to {
+      background: #0cccf3
+    }
+
+    #market {
+      background: #02aaff
+    }
+
+    #rawthis {
+      padding-top: 26px;
+      padding-bottom: 26px;
+      background: #3fbe80;
+
+    }
+
+    #rawlittle {
+      background: #34cb98;
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+  </style>
+  <table id="table1">
+    <thead>
+      <th colspan="5" id="caption">Table of products</th>
+    </thead>
+    <tbody id="odd">
+      <tr>
+        <th id="overflow">Name</th>
+        <th id="wrap">Origin</th>
+        <th>Proteins</th>
+        <th>Fats</th>
+        <th>Carbohydrates</th>
+      </tr>
+    </tbody>
+    <tbody id="even">
+      <tr>
+        <th id="overflow">bread (hlaifs in Gothic: modern English loaf)</th>
+        <th id="wrap">Bread is one of the oldest prepared foods. Evidence from 30,000 years ago in Europe revealed starch residue on rocks used for pounding plants.</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </tbody>
+    <tbody id="odd">
+      <tr>
+        <th id="overflow"> porridge</th>
+        <th id="wrap"></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </tbody>
+    <tbody id="even">
+      <tr>
+        <th id="overflow">fish </th>
+        <th id="wrap"></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </tbody>
+
+    <tbody id="odd">
+      <tr>
+        <th id="overflow">cheese</th>
+        <th id="wrap"></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <table border="0">
+    <tr>
+      <div>
+        <th>
+          <div id="this"> This</div>
+        </th>
+        <th>
+          <div id="little"> Little </div>
+        </th>
+        <th>
+          <div id="piggy"> Piggy</div>
+        </th>
+        <th>
+          <div id="went"> Went </div>
+        </th>
+        <th>
+          <div id="to"> To</div>
+        </th>
+        <th>
+          <div id="market"> Market </div>
+        </th>
+      </div>
+    </tr>
+    <tr>
+      <div>
+        <th colspan="2">
+          <div id="this"> This</div>
+        </th>
+        <th>
+          <div id="little"> Little </div>
+        </th>
+        <th>
+          <div id="piggy"> Piggy</div>
+        </th>
+        <th>
+          <div id="went"> Went </div>
+        </th>
+        <th>
+          <div id="to"> To</div>
+        </th>
+      </div>
+    </tr>
+    <tr>
+      <div>
+        <th colspan="4">
+          <div id="this"> This</div>
+        </th>
+        <th rowspan="3">
+          <div id="rawlittle"> Little </div>
+        </th>
+        <th>
+          <div id="piggy"> Piggy</div>
+        </th>
+      </div>
+    </tr>
+    <tr>
+      <div>
+        <th rowspan="2">
+          <div id="rawthis"> This</th>
+        <th>
+          <div id="little"> Little </div>
+        </th>
+        <th>
+          <div id="piggy"> Piggy</div>
+        </th>
+        <th>
+          <div id="went"> Went </div>
+        </th>
+        <th>
+          <div id="to"> To</div>
+        </th>
+        </div>
+    </tr>
+    <tr>
+      <div>
+        <th>
+          <div id="little"> Little </div>
+        </th>
+        <th>
+          <div id="piggy"> Piggy</div>
+        </th>
+        <th>
+          <div id="went"> Went </div>
+        </th>
+        <th>
+          <div id="to"> To</div>
+        </th>
+      </div>
+    </tr>
+  </table>
+</head>
+
 </html>
