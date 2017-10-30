@@ -1,0 +1,34 @@
+.form {
+  width: 1080px;
+  height: 65px;
+  background-color: #3e4757;
+  margin: 0 auto;
+}
+
+.menu {
+  margin-left: 126px;
+  margin-right: 126px;
+  justify-content: space-between;
+  font-size: 13px;
+  display: flex;
+}
+
+.button {
+  height: 15px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 13px;
+  letter-spacing: 0.9px;
+  color: #fff;
+  outline: none;
+}
+
+.button:hover {
+  padding-bottom: 38px;
+  border-bottom: 3px solid #ffdd2d;
+  color: #fff;
+  text-decoration: none;
+}
