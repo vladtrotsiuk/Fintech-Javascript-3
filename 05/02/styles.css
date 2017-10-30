@@ -1,5 +1,5 @@
 .cards {
-   height: 546px;
+  height: 546px;
   margin: -86px 0 0 -35px;
 }
 
@@ -10,40 +10,39 @@
   height: 410px;
   background-image: linear-gradient(to right, #1489e7, #003e82);
 }
-.text1{
+
+.text1 {
   width: 342px;
   height: 100px;
   font-family: Roboto;
   font-size: 50px;
   line-height: 1;
   font-weight: lighter;
-  color: #ffffff;
-  margin-top:91px;
+  color: #fff;
+  margin-top: 91px;
 }
 
-.text2{
-  margin-top:18px;
+.text2 {
+  margin-top: 18px;
   width: 326px;
   height: 48px;
   font-family: Roboto;
   font-weight: 50;
   font-size: 16px;
   line-height: 1.5;
-  color: #ffffff;
-
+  color: #fff;
 }
 
-.mbutton{
+.mbutton {
   border: 0px;
-  margin-top:20px;
+  margin-top: 20px;
   width: 212px;
   height: 62px;
   border-radius: 6px;
   background-color: #ffdd2d;
   background-color: var;
- font-family: Roboto;
- font-size: 17px;
- line-height: 1.41;
-
- color: #333333;
+  font-family: Roboto;
+  font-size: 17px;
+  line-height: 1.41;
+  color: #333;
 }

@@ -6,31 +6,29 @@
 }
 
 .menu {
-  margin-left:126px;
-  margin-right:126px;
+  margin-left: 126px;
+  margin-right: 126px;
   justify-content: space-between;
   font-size: 13px;
   display: flex;
 }
 
-
-.button{
-
+.button {
   height: 15px;
-  margin-top:25px;
+  margin-top: 25px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-family: Roboto;
   font-size: 13px;
   letter-spacing: 0.9px;
-  color: #ffffff;
+  color: #fff;
   outline: none;
 }
 
-.button:hover{
-  padding-bottom:38px;
+.button:hover {
+  padding-bottom: 38px;
   border-bottom: 3px solid #ffdd2d;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
