@@ -1,29 +1,153 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet/less" type="text/css" href="./main.less" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js" ></script>
-    <title>Задание 6.1</title>
+  <title>Задание 6</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet/less" type="text/css" href="./styles.css" />
+  <!--link rel="stylesheet" href="styles.css"-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300;subset=cyrillic" rel="stylesheet">
+
 </head>
+
 <body>
-<h1>Сверстать полную страницу (без футера).</h1>
-<h4>Макеты:</h4>
-<ul>
-    <li><a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a307604687f0394b3ba039">Desktop 1</a></li>
-    <li><a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3075a4ec334e848d7f333">Desktop 2</a></li>
-    <li><a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3076d2fc6273f38fc51c5">Mobile 1</a></li>
-</ul>
-<h4>Особенности:</h4>
-<ul>
-    <li>Брейкпойнт для мобильной: 640px</li>
-    <li>До брейкпойнта верстка ломаться не должна, если ломается и никак иначе не избежать, ввести промежуточный брейкпойнт.</li>
-    <li>Использоваться БЭМ-нэйминг для классов.</li>
-    <li>Использовать less.</li>
-    <li>Повторяющиеся размера, цвета вынести в переменные.</li>
-    <li>Для элементов, у которых могут меняться состояние (цвет текста, бордер, фон, размер, позиция и тп), добавить transition.</li>
-    <li>Тултип также должен появляться с анимацией.</li>
-    <li>Для иконок использовать svg.</li>
-</ul>
+  <div class="page">
+
+    <div class="block1">
+      <div class="block1__img">
+      </div>
+      <div class="block1__item">
+        <div class="block1__item__text">8 800 555-11-22 </div>
+      </div>
+
+    </div>
+    <div class="block2">
+
+      <div class="block2__menu">
+        <a class="block2__button" href="#">Карты</a>
+        <a class="block2__button" href="#">Вклады</a>
+        <a class="block2__button" href="#">Платежи и переводы</a>
+        <a class="block2__button" href="#">Бонусы</a>
+        <a class="block2__button" href="#">Страхование</a>
+        <a class="block2__button" href="#">О банке</a>
+      </div>
+
+    </div>
+
+    <div class="block3">
+      <div class="row">
+        <div class="col-xs-6">
+          <img src="images/cards.png" class="block3__image" alt="cards">
+        </div>
+        <div class="col-xs-6 ">
+          <div class="block3__text1">
+            <div>Карты для вас</div>
+            <div>прямо сейчас</div>
+          </div>
+          <div class="block3__text2">
+            <div> Выбирайте карту, пользуйтесь</div>
+            <div>удобными сервисами</div>
+          </div>
+          <button type="button" class="block3__button"> Оформить заявку </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="middle-block1">
+      Любые категории платежей
+    </div>
+
+    <div class="block4">
+      <div class="block4__tag">
+        <a class="block4__item"> Кафе</a>
+        <button class="block4__button"><img src="images/cross.svg" alt="delete tag"></button></div>
+      <div class="block4__space"> </div>
+      <div class="block4__tag">
+        <a class="block4__item"> Интернет</a>
+        <button class="block4__button"><img src="images/cross.svg" alt="delete tag"></button></div>
+      <div class="block4__space"> </div>
+      <div class="block4__tag">
+        <a class="block4__item"> Телефон</a>
+        <button class="block4__button"><img src="images/cross.svg" alt="delete tag"></button></div>
+      <div class="block4__space"> </div>
+      <div class="block4__tag">
+        <a class="block4__item"> Авто</a>
+        <button class="block4__button"><img src="images/cross.svg" alt="delete tag"></button></div>
+      <div class="block4__space"> </div>
+      <div class="block4__tag">
+        <a class="block4__item"> ЖКХ</a>
+        <button class="block4__button"><img src="images/cross.svg" alt="delete tag"></button></div>
+      <div class="block4__space"> </div>
+      <div class="block4__tag">
+        <a class="block4__item"> Одежда и обувь </a>
+        <button class="block4__button"><img src="images/cross.svg" alt="delete tag"></button></div>
+      <div class="block4__space"> </div>
+      <div class="block4__tag">
+        <a class="block4__item"> Супермаркеты, гастрономы, универмаги и к </a>
+        <button class="block4__button"><img class="block4__item__crossimage" src="images/cross.svg" alt="delete tag"></button></div>
+
+      <input class="block4__input">
+
+    </div>
+
+    <div class="middle-block2"> Заполнение нескольких простых полей</div>
+
+    <div class="block5">
+      <form class="block5__cont">
+        <div class="block5__cont__elem">
+          <div class="block5__cont__elem__content">
+            <label class="block5__cont__elem__content__label" for="fname">ФИО</label>
+            <input class="block5__cont__elem__content__input-field" type="text" id="fname" name="fname" contenteditable="false" placeholder="Имя Фамилия">
+          </div>
+        </div>
+        <div class="block5__cont__elem" style="background: none; border: solid 1px #d0011b; margin-bottom: 11px">
+          <div class="block5__cont__elem__content">
+            <label class="block5__cont__elem__content__label" for="city">Город проживания</label>
+            <input class="block5__cont__elem__content__input-field" type="text" id="city" name="city" contenteditable="false" placeholder="Город проживания">
+          </div>
+          <img src="images/exclmark.svg" class="block5__exclmark-image">
+        </div>
+        <label class="block5__cont__elem__content__message-label">Для заполнения этого поля не допустимо использовать буквы латинского алфавита</label>
+        <div class="block5__cont__elem">
+          <div class="block5__cont__elem__content">
+            <label class="block5__cont__elem__content__label" for="phone">Мобильный телефон</label>
+            <input class="block5__cont__elem__content__input-field" type="tel" id="phone" name="phone" contenteditable="false" placeholder="Мобильный телефон">
+          </div>
+        </div>
+        <div class="block5__cont__elem ">
+          <div class="block5__cont__elem__content ">
+            <label class="block5__cont__elem__content__label" for="email">Электронная почта</label>
+            <input class="block5__cont__elem__content__input-field " type="email" id="email" name="email" contenteditable="False" placeholder="Электронная почта">
+          </div>
+          <img src="images/questmark.svg" class="block5__questmark-image">
+        </div>
+        <div class="block5__cont__elem" style="background: none">
+          <div class="middle-block3">
+            Выберите это или другое
+          </div>
+        </div>
+        <div class="block6" style="background: none">
+          <div class="block6__cont">
+            <div class="block6__cont__text">Это</div>
+            <img src="images/pointbuton.svg" class="block6__cont__but-image-on">
+          </div>
+          <div class="block6__cont" style="margin-left: auto">
+            <div class="block6__cont__text">Другое</div>
+            <img src="images/pointbutoff.svg" class="block6__cont__but-image-off">
+          </div>
+        </div>
+      </form>
+      <form class="block7">
+        <text class="block7__cont">Отправить</text>
+      </form>
+    </div>
+  </div>
+
+
+
 </body>
+
 </html>
